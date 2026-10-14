@@ -21,7 +21,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p "$RUNNER_TEMP/manbar"
-          gh release download v9.0 \
+          gh release download v10.0 \
             --repo "$GITHUB_REPOSITORY" \
             --pattern "*.zip" \
             --dir "$RUNNER_TEMP/manbar"
