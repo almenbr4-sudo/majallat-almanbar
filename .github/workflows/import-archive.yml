@@ -1,3 +1,4 @@
+
 name: Import Al Manbar Archive
 
 on:
@@ -21,7 +22,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           mkdir -p "$RUNNER_TEMP/manbar"
-         gh release download v12.0 \
+          gh release download v12.0 \
             --repo "$GITHUB_REPOSITORY" \
             --pattern "*.zip" \
             --dir "$RUNNER_TEMP/manbar"
@@ -38,6 +39,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           if ! git diff --cached --quiet; then
-            git commit -m "Import complete Al Manbar archive v9"
+            git commit -m "Import Al Manbar complete archive v12.0"
             git push
           fi
